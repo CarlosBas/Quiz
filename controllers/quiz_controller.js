@@ -104,3 +104,10 @@ exports.update = function(req, res) {
 exports.author = function(req, res) {
    res.render('author', {autor: 'Carlos Andrés Bas Canellas',errors: []});
  };
+
+ // DELETE /quizes/:id
+exports.destroy = function(req, res){
+  req.quiz.destroy().then(function(){
+    res.redirect('/quizes');
+  }).catch(function(error){next(error)});
+}
