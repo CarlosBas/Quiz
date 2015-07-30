@@ -1,12 +1,15 @@
-
+<h3>Buscador de preguntas</h3>
 <form method="get" action="/quizes">
-    Buscar preguntas por texto ordenadas alfabeticamente:<br>
-	<input type="text" name="search" placeholder="Texto a buscar"/> <br>
-	<input type="submit" value="Buscar"/>
-  </form>
+  Texto a buscar<p>
+  <input type="text" name="search" placeholder="Texto buscado">
+  <input type="submit" value="Enviar">
+</form>
 <table>
-<% var i; for (i=0; i < quizes.length; i++) { %>
-   <tr><td><a href="quizes/<%= quizes[i].id %>"><%= quizes[i].pregunta %></a></td></tr>
-<% } %>
-</table><p>
-<a href="/quizes/new"><button type="button">Crear pregunta</button></a>
+  <% var i; for (i=0; i < quizes.length; i++) { %>
+    <tr>
+      <td><a href="/quizes/<%= quizes[i].id %>"><%= quizes[i].pregunta %></a></td>
+      <td><a href="/quizes/<%= quizes[i].id %>/edit"><button>editar</button></a></td>
+   </tr>
+  <% } %>
+</table>
+<a href="/quizes/new"><button>Crear pregunta</button></a>
