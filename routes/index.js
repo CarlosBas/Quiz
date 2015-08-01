@@ -11,6 +11,10 @@ router.get('/', function(req, res) {
 // Autoload de comandos con ids
 router.param('quizId', quizController.load);
 
+router.get('/author', function(req, res) {
+  res.render('author', { author: 'Carlos Andrés Bas Canellas', errors: [] });
+});
+
 // Definición de rutas de /quizes
 router.get('/quizes',                      quizController.index);
 router.get('/quizes/:quizId(\\d+)',        quizController.show);
@@ -20,10 +24,5 @@ router.post('/quizes/create',              quizController.create);
 router.get('/quizes/:quizId(\\d+)/edit',   quizController.edit);
 router.put('/quizes/:quizId(\\d+)',        quizController.update);
 router.delete('/quizes/:quizId(\\d+)',     quizController.destroy);
-
-//Autor
-router.get('/author', function(req, res) {
-  res.render('author', { title: 'Autor' });
-});
 
 module.exports = router;

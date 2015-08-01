@@ -4,6 +4,7 @@ body                 { font: 16px Georgia, serif;}
 #page-wrap           { margin: 2% auto; color: white; }
 #page-wrap > .main   { border: 1px solid #999; padding: 1%;
 	                   margin-bottom: 1px; color: black;}
+label.cat            { color: grey; margin-right: 10px; }
 
 section > div        { padding: 20px;}
 #n1, #s1			 { height: 400px;}
@@ -13,3 +14,5 @@ footer               { background: #eee; text-align: center;}
 nav span             { margin: 0px 10px 0px 0px;}
 
 #ErrorMsgs           { color: #f61; font-size: smaler}
+button							 { margin-left:10px; }
+img 							 	 { border: 7px groove #006 ; }
