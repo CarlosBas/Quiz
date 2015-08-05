@@ -11,8 +11,10 @@ section > div        { padding: 20px;}
 header, nav, section { background: #eee; text-align: center;}
 
 footer               { background: #eee; text-align: center;}
-nav span             { margin: 0px 10px 0px 0px;}
-
+nav span             { margin: 0px 10px 0px 0px; }
+nav									 { font-size: 18px; font-family: arial; font-weight:bold; }
+nav a:link   	 			 { text-decoration:none; }
 #ErrorMsgs           { color: #f61; font-size: smaler}
 button							 { margin-left:10px; }
 img 							 	 { border: 7px groove #006 ; }
+.right {float: right;}
